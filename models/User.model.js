@@ -14,9 +14,13 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Password is required."],
     },
-    name: {
-      type: String,
-      required: [true, "Name is required."],
+    discord: {
+      id: String,
+      username: String,
+      discriminator: String,
+      avatar: String,
+      access_token: String,
+      refresh_token: String,
     },
   },
   {
